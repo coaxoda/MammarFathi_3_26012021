@@ -121,8 +121,27 @@ header{
 }
 
 .restaurant{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
     background-color: #f7f7f7;
-    height: 400px;
+
+    article{
+        border-radius: $border;
+        box-shadow: $shade2;
+        margin-bottom: 1rem;
+    }
+
+    img{
+        width: 100%;
+        object-fit: cover;
+        height: 190px;
+        border-radius: $bordertop;
+    }
+
+    figcaption, h3, p{
+       margin: 10px;
+    }
 }
 
 footer{

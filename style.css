@@ -1,7 +1,10 @@
+/********** COLORS ************/
+/****** BOX SHADOW ******/
 body {
   margin: 0;
   padding: 0;
-  font-family: Roboto, Arial, Helvetica, sans-serif; }
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  max-width: 400px; }
 
 header {
   display: flex;
@@ -20,10 +23,13 @@ header {
   display: inline-flex;
   justify-content: center;
   color: #4d4d4d;
-  background-color: #e1e1e1;
+  background-color: #ebebeb;
   height: 50px;
   font-size: medium;
-  font-weight: 600; }
+  font-weight: 600;
+  -webkit-box-shadow: inset 0px 9px 6px -8px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: inset 0px 9px 6px -8px rgba(0, 0, 0, 0.35);
+  box-shadow: inset 0px 9px 6px -8px rgba(0, 0, 0, 0.35); }
   .location i {
     padding: 0px 0.5rem;
     margin-left: -20px; }
@@ -33,7 +39,7 @@ header {
 .menuExplorer {
   display: flex;
   flex-flow: column;
-  background-color: #eeeeee;
+  background-color: #f6f6f6;
   padding: 20px 4rem; }
   .menuExplorer p {
     font-weight: 600;
@@ -49,12 +55,11 @@ header {
     background: #ff79da;
     background: linear-gradient(180deg, #ff79da 20%, #9356dc 90%);
     color: white;
-    box-shadow: 0px 5px 5px #c7c6c6;
+    box-shadow: 0px 5px 5px #c6c6c6;
     font-weight: 300; }
 
 .functionContainer {
-  padding: 0.5rem;
-  background-color: aqua; }
+  padding: 0.5rem; }
 
 .functionList {
   display: flex;
@@ -65,7 +70,7 @@ header {
     background-color: #f3f3f3;
     height: 30px;
     border-radius: 1.3rem;
-    box-shadow: 0px 8px 10px #e7e7e7;
+    box-shadow: 0px 5px 5px #c6c6c6;
     font-weight: 500; }
   .functionList span {
     margin: 0px 25px 0px 0px;
@@ -83,5 +88,28 @@ header {
     line-height: 30px;
     width: 1.5rem;
     color: #585858; }
+  .functionList :nth-child(3) {
+    background-color: #f4ecfd; }
+    .functionList :nth-child(3) i {
+      color: #9356DC; }
+
+.restaurant {
+  background-color: #f7f7f7;
+  height: 400px; }
+
+footer {
+  background-color: #353535;
+  color: white;
+  padding: 20px; }
+  footer h3 {
+    font-family: 'Shrikhand', cursive;
+    font-weight: 400;
+    margin-left: 0.5rem;
+    margin-top: 0; }
+  footer p {
+    margin: 10px; }
+  footer i {
+    padding: 0px 15px 5px 0px;
+    width: 1rem; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,7 +1,10 @@
+@import "__vars.scss";
+
 body{
     margin: 0;
     padding: 0;
     font-family: Roboto, Arial, Helvetica, sans-serif;
+    max-width: 400px;
 }
 
 header{
@@ -24,10 +27,13 @@ header{
     display: inline-flex;
     justify-content: center;
     color: rgb(77, 77, 77);
-    background-color: rgb(225, 225, 225);
+    background-color:#ebebeb;
     height: 50px;
     font-size: medium;
     font-weight: 600;
+    -webkit-box-shadow: inset 0px 9px 6px -8px rgba(0,0,0,0.35);
+    -moz-box-shadow: inset 0px 9px 6px -8px rgba(0,0,0,0.35);
+    box-shadow: inset 0px 9px 6px -8px rgba(0,0,0,0.35);
 
     i{
         padding: 0px 0.5rem;
@@ -42,7 +48,7 @@ header{
 .menuExplorer{  
     display: flex;
     flex-flow: column;
-    background-color: #eeeeee;
+    background-color: #f6f6f6;
     padding: 20px 4rem;
 
     p{
@@ -63,14 +69,13 @@ header{
         background: rgb(255,121,218);
         background: linear-gradient(180deg, rgba(255,121,218,1) 20%, rgba(147,86,220,1) 90%);
         color: white;
-        box-shadow: 0px 5px 5px rgb(199, 198, 198);
+        box-shadow: 0px 5px 5px rgb(198, 198, 198);
         font-weight: 300;
     }
 }
 
 .functionContainer{
     padding: 0.5rem;
-    background-color: aqua;
 }
 
 .functionList{
@@ -83,13 +88,13 @@ header{
         background-color: rgb(243, 243, 243);
         height: 30px;
         border-radius: 1.3rem;
-        box-shadow: 0px 8px 10px rgb(231, 231, 231);
+        box-shadow: $shade;
         font-weight: 500;
     }
 
     span{
         margin: 0px 25px 0px 0px;
-        background-color: #9356DC;
+        background-color: $primary;
         color: white;
         border-radius: 2rem;
         padding: 4px 8px;
@@ -105,6 +110,40 @@ header{
         line-height: 30px;
         width: 1.5rem;
         color: rgb(88, 88, 88);
+    }
+    :nth-child(3){
+        background-color:#f4ecfd;
+        
+        i{
+            color: $primary;
+        }
+    }
+}
+
+.restaurant{
+    background-color: #f7f7f7;
+    height: 400px;
+}
+
+footer{
+    background-color: #353535;
+    color: white;
+    padding: 20px;
+
+    h3{
+        font-family: 'Shrikhand', cursive;
+        font-weight: 400;
+        margin-left: 0.5rem;
+        margin-top: 0;
+    }
+
+    p{
+        margin: 10px;
+    }
+    
+    i{
+        padding: 0px 15px 5px 0px;
+        width: 1rem;
     }
 }
 

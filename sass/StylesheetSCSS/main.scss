@@ -1,0 +1,195 @@
+@import "__vars.scss";
+/******* @import "reset.scss"; ***********/
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    max-width: 400px;
+
+    a{
+        text-decoration: none;
+        color: #1d1d1d;
+    }
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    background-color: #eeeeee;
+
+    h1{
+        display: inline-flex;
+        justify-content: center;
+        font-family: Shrikhand;
+        font-weight: 400;
+        margin: 0;
+        background-color: white;
+        z-index: 1;  
+    }
+}
+
+.location{
+    display: inline-flex;
+    justify-content: center;
+    color: rgb(77, 77, 77);
+    background-color:#ebebeb;
+    height: 50px;
+    font-size: medium;
+    font-weight: 600;
+    -webkit-box-shadow: inset 0px 9px 6px -8px rgba(0,0,0,0.35);
+    -moz-box-shadow: inset 0px 9px 6px -8px rgba(0,0,0,0.35);
+    box-shadow: inset 0px 9px 6px -8px rgba(0,0,0,0.35);
+
+    i{
+        padding: 0px 0.5rem;
+        margin-left: -20px;
+    }
+
+    p{
+        line-height: 25px;
+    }
+}
+
+.menuExplorer{  
+    display: flex;
+    flex-flow: column;
+    background-color: #f6f6f6;
+    padding: 20px 4rem;
+
+    p{
+        font-weight: 600;
+        font-size: 1.5rem; 
+    }
+
+    span,p{
+        text-align: center;
+    }
+
+    button{
+        width: 70%;
+        margin: 20px auto;
+        height: 50px;
+        border-radius: 2rem;
+        border: 0ch;
+        background: rgb(255,121,218);
+        background: linear-gradient(180deg, rgba(255,121,218,1) 20%, rgba(147,86,220,1) 90%);
+        color: white;
+        box-shadow: $shade2;
+        font-weight: 300;
+        outline: none;
+        cursor: pointer;
+        transition: all, 0.2s ease-in;
+
+        &:hover{
+            
+            box-shadow: $shadeMov;
+        }
+    }
+}
+
+.functionContainer{
+    padding: 0.5rem;
+}
+
+.functionList{
+    display: flex;
+    flex-direction: column;
+
+    p{
+        margin: 1rem 2rem;
+        padding: 20px 0px 20px 0px;
+        background-color: rgb(243, 243, 243);
+        height: 30px;
+        border-radius: 1.3rem;
+        box-shadow: $shade2;
+        font-weight: 500;
+
+        i{
+            font-size: 18px;
+            padding: 0rem 1rem 0rem 0rem;
+            line-height: 30px;
+            width: 1.5rem;
+            color: rgb(88, 88, 88);
+        }
+    
+        &:hover{
+            background-color: rgb(253, 242, 255);
+        }
+    }
+
+    span{
+        margin: 0px 25px 0px -12.5px;
+        background-color: $primary;
+        color: white;
+        border-radius: 2rem;
+        padding: 4px 8px;
+        height: 10px;
+        width: 10px;
+        font-size: small;
+        font-weight: 400;
+    }
+
+    
+}
+
+.restaurant{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    background-color: #f7f7f7;
+
+    article{
+        border-radius: $border;
+        box-shadow: $shade2;
+        margin-bottom: 1rem;
+    }
+
+    img{
+        width: 100%;
+        object-fit: cover;
+        height: 190px;
+        border-radius: $bordertop;
+    }
+
+    figcaption, h3, p {
+        margin: 10px;
+        position: relative;
+    }
+
+    i{
+        position: absolute;
+        left: 290px;
+        padding: 0;
+        top: 10px;
+        border: none;
+        background-color: #f7f7f7;
+        cursor: pointer;
+        font-size: x-large;
+        transition: all, 0.5s ease-in;
+    }
+}
+
+footer{
+    background-color: #353535;
+    color: white;
+    padding: 20px;
+
+    h3{
+        font-family: 'Shrikhand', cursive;
+        font-weight: 400;
+        margin-left: 0.5rem;
+        margin-top: 0;
+    }
+
+    p{
+        margin: 10px;
+    }
+    
+    i{
+        padding: 0px 15px 5px 0px;
+        width: 1rem;
+    }
+}
+
+

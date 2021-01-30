@@ -1,115 +1,123 @@
-body{
-    margin: 0;
-    padding: 0;
-    font-family: Roboto, Arial, Helvetica, sans-serif;
-    max-width: 400px;
+@import "__vars.scss";
+@media screen and (max-width: 400px){
 
-    a{
-        text-decoration: none;
-        color: #1d1d1d;
-    }
-}
-
-header{
-    display: inline-flex;
-    width: 100%;
-    height: 50px;
-    h1{
-        display: flex;
-        font-family: Shrikhand;
-        font-weight: 200;
-        justify-content: space-between;
-        width: 75%;
+    body{
         margin: 0;
+        padding: 0;
+        font-family: Roboto, Arial, Helvetica, sans-serif;
+        a{
+            text-decoration: none;
+            color: #1d1d1d;
+        }
+    }
+
+    header{
+        display: inline-flex;
+        width: 100%;
+        height: 50px;
+        h1{
+            display: flex;
+            font-family: Shrikhand;
+            font-weight: 200;
+            justify-content: space-between;
+            width: 75%;
+            margin: 0;
+
+            i{
+                width: 50px;
+                height: 30px;
+                font-size: x-large;
+                padding: 10px;
+                z-index: 10;
+            }
+        }
+
+    }
+
+    main{
+        width: 100%;
+        background-color: #f2f2f2; 
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .mainContent{
+        width: 100%;
+        background-color: #f2f2f2;
+        border-radius: 2rem;
+        position: relative;
+        top: -55px;
+        background-color: #f2f2f2;
+        h1{
+            display: inline-flex;
+            justify-content: space-between;
+            font-family: shrikhand;
+            font-weight: 200;
+            font-size: 25px;
+            width: 90%;
+            padding: 0px 20px;
+        }
 
         i{
-            width: 50px;
-            height: 30px;
-            font-size: x-large;
-            padding: 10px;
-        }
-    }
+            &:hover{
+                font-weight: 600;
+                color: $primary;
 
-}
-
-main{
-    width: 100%;
-    background-color: #f2f2f2;
-    img{
-        width: 100%;
-        object-fit: cover;
-    }
-}
-
-.mainContent{
-    width: 100%;
-    background-color: #f2f2f2;
-    border-radius: 2rem;
-    position: relative;
-    top: -55px;
-    background-color: #f2f2f2;
-    h1{
-        display: inline-flex;
-        justify-content: space-between;
-        font-family: shrikhand;
-        font-weight: 200;
-        font-size: 25px;
-        width: 90%;
-        padding: 0px 20px;
-    }
-}
-
-.menu{
-    padding: 0rem 2rem 2rem 2rem;
-
-    h3{
-        width: 12%;
-        font-weight: 300;
-        border-bottom: #99E2D0 3px solid;
-    }
-
-    article{
-        width: 100%;
-        height: 3.5rem;
-        background-color: white;
-        box-shadow: 0px 0px 10px #d6d6d6;
-        border-radius: 1rem;
-        transition: scale, 0.2s ease-in;
-
-        &:hover{
-            transform: scale(1.02);
-        }
-
-        p{
-            display: flex;
-            flex-direction: column;
-            padding:0.8rem;
-
-            span{
-                font-size: smaller;
+                &:focus{
+                    color: $primary;
+                }
             }
         }
     }
-}
 
-footer{
-    background-color: #353535;
-    color: white;
-    padding: 20px;
+    .menu{
+        padding: 0rem 2rem 2rem 2rem;
+        h3{
+            width: 12%;
+            font-weight: 300;
+            border-bottom: #99E2D0 3px solid;
+        }
 
-    h3{
-        font-family: 'Shrikhand', cursive;
-        font-weight: 400;
-        margin-left: 0.5rem;
-        margin-top: 0;
+        article{
+            width: 100%;
+            height: 3.5rem;
+            background-color: white;
+            box-shadow: 0px 0px 10px #d6d6d6;
+            border-radius: 1rem;
+
+            p{
+                display: flex;
+                flex-direction: column;
+                padding:0.8rem;
+
+                span{
+                    font-size: smaller;
+                }
+            }
+        }
     }
 
-    p{
-        margin: 10px;
-    }
-    
-    i{
-        padding: 0px 15px 5px 0px;
-        width: 1rem;
+    footer{
+        background-color: #353535;
+        color: white;
+        padding: 20px;
+
+        h3{
+            font-family: 'Shrikhand', cursive;
+            font-weight: 400;
+            margin-left: 0.5rem;
+            margin-top: 0;
+        }
+
+        p{
+            margin: 10px;
+        }
+        
+        i{
+            padding: 0px 15px 5px 0px;
+            width: 1rem;
+        }
     }
 }

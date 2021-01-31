@@ -1,0 +1,14 @@
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+  
+  from {
+      margin-right: 0px;
+  }
+
+  to {
+      margin-right: 40px;
+  }
+  
+}
+

@@ -1,14 +1,54 @@
-@keyframes wiggle {
-    0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-  
-  from {
-      margin-right: 0px;
-  }
-
-  to {
-      margin-right: 40px;
-  }
-  
+@import "__functions.scss";
+/*** ANIMATION WHEN :HOVER ON ARTICLE OF MENU ***/
+@keyframes slidein{
+    from {
+        transform: translateX(70px);
+      }
+    
+      to { 
+        transform: translateX(0px);
+      }
 }
 
+/*** ANIMATION WHEN UN:HOVER On ARTICLE OF MENU ***/
+@keyframes slideout{
+    from {
+        transform: translateX(0px);
+      }
+    
+      to {
+        transform: translateX(70px); 
+      }
+}
+/*** ICON VALIDATOR ANIMATION ***/
+@keyframes roll{
+    0%{ transform: rotate(0deg);}
+    100%{ transform: rotate(360deg);}
+}
+
+/*** APPEAR MENU ANIMATION WIDTH DELAY (more at "__functions.scss")***/
+@keyframes menu{
+  0% {
+      opacity: 0;
+      margin-bottom: 50px;
+      transform: scale(0);
+  }
+  15% {
+      opacity: 0;
+  }
+  25% {
+      opacity: 0;
+  }
+  50% {
+      opacity: 0.2;
+      transform: scale(1.01);
+  }
+  75% {
+      opacity: 0.5;
+      transform: scale(0.99);
+  }
+  100% {
+      opacity: 1;
+      transform: scale(1);
+  }
+}

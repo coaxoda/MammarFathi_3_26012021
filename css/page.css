@@ -1,17 +1,32 @@
 /********** COLORS ************/
 /****** BOX SHADOW ******/
 /******** RADIUS *********/
-.menuOne {
-  animation: menu 1.3s; }
+.entryMenu .menuOne {
+  animation: menu 1.2s; }
+.entryMenu .menuTwo {
+  animation: menu 1.4s; }
+.entryMenu .menuThree {
+  animation: menu 1.6s; }
+.entryMenu .menuFour {
+  animation: menu 1.8s; }
 
-.menuTwo {
-  animation: menu 1.5s; }
-
-.menuThree {
-  animation: menu 1.9s; }
-
-.menuFour {
+.mainMenu .menuOne {
   animation: menu 2.2s; }
+.mainMenu .menuTwo {
+  animation: menu 2.4s; }
+.mainMenu .menuThree {
+  animation: menu 2.6s; }
+.mainMenu .menuFour {
+  animation: menu 2.8s; }
+
+.endMenu .menuOne {
+  animation: menu 3.2s; }
+.endMenu .menuTwo {
+  animation: menu 3.4s; }
+.endMenu .menuThree {
+  animation: menu 3.6s; }
+.endMenu .menuFour {
+  animation: menu 3.8s; }
 
 /*** ANIMATION WHEN :HOVER ON ARTICLE OF MENU ***/
 @keyframes slidein {
@@ -42,32 +57,46 @@
   15% {
     opacity: 0; }
   25% {
-    opacity: 0.1; }
+    opacity: 0; }
   50% {
-    opacity: 0.2;
-    transform: scale(1.01); }
-  75% {
     opacity: 0.5;
-    transform: scale(0.95); }
+    transform: scale(1.1); }
+  75% {
+    opacity: 0.6;
+    transform: scale(0.99); }
   100% {
     opacity: 1;
     transform: scale(1); } }
 /**** LOADER ANIMATION SETTINGS ***/
 @keyframes loader {
   100% {
-    opacity: 0;
-    z-index: -10; } }
-.menuOne {
-  animation: menu 1.3s; }
+    opacity: 0; } }
+.entryMenu .menuOne {
+  animation: menu 1.2s; }
+.entryMenu .menuTwo {
+  animation: menu 1.4s; }
+.entryMenu .menuThree {
+  animation: menu 1.6s; }
+.entryMenu .menuFour {
+  animation: menu 1.8s; }
 
-.menuTwo {
-  animation: menu 1.5s; }
-
-.menuThree {
-  animation: menu 1.9s; }
-
-.menuFour {
+.mainMenu .menuOne {
   animation: menu 2.2s; }
+.mainMenu .menuTwo {
+  animation: menu 2.4s; }
+.mainMenu .menuThree {
+  animation: menu 2.6s; }
+.mainMenu .menuFour {
+  animation: menu 2.8s; }
+
+.endMenu .menuOne {
+  animation: menu 3.2s; }
+.endMenu .menuTwo {
+  animation: menu 3.4s; }
+.endMenu .menuThree {
+  animation: menu 3.6s; }
+.endMenu .menuFour {
+  animation: menu 3.8s; }
 
 /****** BODY SECTION *****/
 body {

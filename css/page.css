@@ -2,27 +2,29 @@
 /****** BOX SHADOW ******/
 /******** RADIUS *********/
 .menuOne {
-  animation: menu 1s; }
+  animation: menu 1.3s; }
 
 .menuTwo {
-  animation: menu 1.4s; }
+  animation: menu 1.5s; }
 
 .menuThree {
-  animation: menu 1.6s; }
+  animation: menu 1.9s; }
 
 .menuFour {
-  animation: menu 1.8s; }
+  animation: menu 2.2s; }
 
 /*** ANIMATION WHEN :HOVER ON ARTICLE OF MENU ***/
 @keyframes slidein {
   from {
     transform: translateX(70px); }
   to {
-    transform: translateX(0px); } }
+    transform: translateX(0px);
+    width: 90px; } }
 /*** ANIMATION WHEN UN:HOVER On ARTICLE OF MENU ***/
 @keyframes slideout {
   from {
-    transform: translateX(0px); }
+    transform: translateX(0px);
+    width: 90px; }
   to {
     transform: translateX(70px); } }
 /*** ICON VALIDATOR ANIMATION ***/
@@ -35,38 +37,44 @@
 @keyframes menu {
   0% {
     opacity: 0;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     transform: scale(0); }
   15% {
     opacity: 0; }
   25% {
-    opacity: 0; }
+    opacity: 0.1; }
   50% {
     opacity: 0.2;
     transform: scale(1.01); }
   75% {
     opacity: 0.5;
-    transform: scale(0.99); }
+    transform: scale(0.95); }
   100% {
     opacity: 1;
     transform: scale(1); } }
+/**** LOADER ANIMATION SETTINGS ***/
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -10; } }
 .menuOne {
-  animation: menu 1s; }
+  animation: menu 1.3s; }
 
 .menuTwo {
-  animation: menu 1.4s; }
+  animation: menu 1.5s; }
 
 .menuThree {
-  animation: menu 1.6s; }
+  animation: menu 1.9s; }
 
 .menuFour {
-  animation: menu 1.8s; }
+  animation: menu 2.2s; }
 
 /****** BODY SECTION *****/
 body {
   margin: 0;
   padding: 0;
-  font-family: Roboto, Arial, Helvetica, sans-serif; }
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth; }
   body a {
     text-decoration: none;
     color: #1d1d1d; }
@@ -134,67 +142,63 @@ main {
     border-bottom: #99E2D0 3px solid;
     text-transform: uppercase; }
   .menu article {
+    background-color: #fff;
     display: flex;
-    width: 100%;
-    height: 4rem;
-    background-color: white;
-    box-shadow: 0px 0px 10px #d6d6d6;
     border-radius: 1rem;
-    margin: 1.2rem auto;
+    margin: 1rem 0rem;
+    overflow: hidden;
     cursor: pointer;
+    height: 64px;
     /*** STRING CONTENT OF ARTICLE MENU ***/ }
     .menu article .menuContent {
-      position: absolute; }
-    .menu article p {
-      display: flex;
-      flex-direction: column;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
       padding: 1rem;
-      font-weight: 400;
-      margin: 0; }
-      .menu article p span {
+      width: 100%; }
+      .menu article .menuContent h4 {
+        flex-direction: column;
+        font-weight: 400;
+        margin: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis; }
+      .menu article .menuContent p {
         font-size: smaller;
-        font-weight: 300; }
+        font-weight: 300;
+        margin: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis; }
 
 /*** VALIDATOR OF SELECTION ICON & ANIMATION ***/
-.checker {
+.checkin {
   display: flex;
-  width: 100%;
-  position: relative;
-  cursor: pointer;
-  height: 64px;
-  overflow: hidden;
-  border-radius: 0rem 1rem 1rem 0rem; }
-  .checker .checkin {
-    display: flex;
-    justify-content: flex-end;
+  justify-content: flex-end;
+  animation: slideout 0.5s both;
+  width: 30px; }
+  .checkin h4 {
+    margin: 1rem;
+    line-height: 64px; }
+  .checkin i {
+    font-size: 2rem;
+    border-radius: 0rem 1rem 1rem 0rem;
     position: relative;
-    width: 100%;
-    animation: slideout 1s both; }
-    .checker .checkin h4 {
-      margin: 1rem;
-      line-height: 64px; }
-    .checker .checkin:hover {
-      animation: slidein 1s forwards; }
-    .checker .checkin i {
-      font-size: 2rem;
-      border-radius: 0rem 1rem 1rem 0rem;
-      position: relative;
-      padding: 0;
-      padding: 0rem 1rem;
-      display: flex;
-      margin: 0;
-      justify-content: flex-end;
-      line-height: 64px;
-      color: white;
-      background: #99E2D0;
-      height: 64px; }
+    padding: 0;
+    padding: 0rem 1rem;
+    display: flex;
+    margin: 0;
+    justify-content: flex-end;
+    line-height: 64px;
+    color: white;
+    background: #99E2D0;
+    height: 64px; }
 
 /*** SETTINGS OF ROLLING CHECK ICON ***/
-article:hover .checker {
-  display: block;
-  overflow: hidden; }
-  article:hover .checker .checkin i::before {
-    animation: roll 1s; }
+article:hover .checkin {
+  animation: slidein 0.5s forwards; }
+article:hover .checkin i::before {
+  animation: roll 0.5s; }
 
 /*** BUTTON OF CHECKOUT ***/
 .checkout {

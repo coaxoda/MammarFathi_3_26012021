@@ -7,6 +7,7 @@
     
       to { 
         transform: translateX(0px);
+        width: 90px;
       }
 }
 
@@ -14,6 +15,7 @@
 @keyframes slideout{
     from {
         transform: translateX(0px);
+        width: 90px;
       }
     
       to {
@@ -30,14 +32,14 @@
 @keyframes menu{
   0% {
       opacity: 0;
-      margin-bottom: 50px;
+      margin-bottom: 20px;
       transform: scale(0);
   }
   15% {
       opacity: 0;
   }
   25% {
-      opacity: 0;
+      opacity: 0.1;
   }
   50% {
       opacity: 0.2;
@@ -45,10 +47,17 @@
   }
   75% {
       opacity: 0.5;
-      transform: scale(0.99);
+      transform: scale(0.95);
   }
   100% {
       opacity: 1;
       transform: scale(1);
   }
+}
+
+/**** LOADER ANIMATION SETTINGS ***/
+
+@keyframes loader{
+    100%{opacity: 0;
+    }
 }

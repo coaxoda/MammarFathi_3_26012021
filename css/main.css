@@ -1,14 +1,150 @@
 /********** COLORS ************/
 /****** BOX SHADOW ******/
 /******** RADIUS *********/
+.entryMenu .menuOne {
+  animation: menu 1.2s; }
+.entryMenu .menuTwo {
+  animation: menu 1.4s; }
+.entryMenu .menuThree {
+  animation: menu 1.6s; }
+.entryMenu .menuFour {
+  animation: menu 1.8s; }
+
+.mainMenu .menuOne {
+  animation: menu 2.2s; }
+.mainMenu .menuTwo {
+  animation: menu 2.4s; }
+.mainMenu .menuThree {
+  animation: menu 2.6s; }
+.mainMenu .menuFour {
+  animation: menu 2.8s; }
+
+.endMenu .menuOne {
+  animation: menu 3.2s; }
+.endMenu .menuTwo {
+  animation: menu 3.4s; }
+.endMenu .menuThree {
+  animation: menu 3.6s; }
+.endMenu .menuFour {
+  animation: menu 3.8s; }
+
+/*** ANIMATION WHEN :HOVER ON ARTICLE OF MENU ***/
+@keyframes slidein {
+  from {
+    transform: translateX(70px); }
+  to {
+    transform: translateX(0px);
+    width: 90px; } }
+/*** ANIMATION WHEN UN:HOVER On ARTICLE OF MENU ***/
+@keyframes slideout {
+  from {
+    transform: translateX(0px);
+    width: 90px; }
+  to {
+    transform: translateX(70px); } }
+/*** ICON VALIDATOR ANIMATION ***/
+@keyframes roll {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+/*** APPEAR MENU ANIMATION WIDTH DELAY (more at "__functions.scss")***/
+@keyframes menu {
+  0% {
+    opacity: 0;
+    margin-bottom: 20px;
+    transform: scale(0); }
+  15% {
+    opacity: 0; }
+  25% {
+    opacity: 0; }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1); }
+  75% {
+    opacity: 0.6;
+    transform: scale(0.99); }
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
+/**** LOADER ANIMATION SETTINGS ***/
+@keyframes loader {
+  0% {
+    opacity: 0;
+    transform: scale(0); }
+  25% {
+    opacity: 0.5; }
+  50% {
+    opacity: 1;
+    transform: scale(1.5); }
+  75% {
+    opacity: 0.5; }
+  100% {
+    opacity: 0;
+    transform: scale(1); } }
+@keyframes loaderAppear {
+  0% {
+    opacity: 0;
+    transform: scale(1.2);
+    z-index: 100; }
+  50% {
+    opacity: 1;
+    transform: scale(1); }
+  90% {
+    transform: scale(1); }
+  95% {
+    transform: scale(1.5);
+    opacity: 1;
+    margin-top: 0; }
+  99% {
+    transform: scale(1.5); }
+  100% {
+    opacity: 0;
+    margin-top: 300%; } }
 /******* @import "reset.scss"; ***********/
 body {
   margin: 0;
   padding: 0;
-  font-family: Roboto, Arial, Helvetica, sans-serif; }
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  /*** LOADER SETTINGS ***/ }
   body a {
     text-decoration: none;
     color: #1d1d1d; }
+  body .loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.877);
+    animation: loaderAppear 3s both; }
+    body .loader .subContainer {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      justify-content: center;
+      align-items: center; }
+    body .loader h1 {
+      color: #383838;
+      font-size: xxx-large;
+      font-family: Shrikhand; }
+    body .loader .loaderLine {
+      position: absolute;
+      top: 430px; }
+    body .loader .line {
+      animation: loader 1s infinite;
+      border-radius: 3rem;
+      display: inline-block;
+      transform-origin: center center;
+      margin: 0 2rem;
+      width: 10px;
+      height: 10px; }
+    body .loader .line:nth-child(1) {
+      background: #9356DC; }
+    body .loader .line:nth-child(2) {
+      animation-delay: 180ms;
+      background: #FF79DA; }
+    body .loader .line:nth-child(3) {
+      animation-delay: 360ms;
+      background: #99E2D0; }
 
 header {
   display: flex;
@@ -120,7 +256,8 @@ header {
       background-color: #99E2D0;
       color: #2a976a;
       font-weight: 600;
-      font-size: smaller; }
+      font-size: smaller;
+      z-index: 2; }
       .restaurant article .new1 p, .restaurant article .new2 p {
         margin: 0 5px;
         padding: 0.5rem; }
@@ -160,7 +297,8 @@ footer {
     margin-left: 0.5rem;
     margin-top: 0; }
   footer p {
-    margin: 10px; }
+    margin: 10px;
+    color: white; }
   footer i {
     padding: 0px 15px 5px 0px;
     width: 1rem; }

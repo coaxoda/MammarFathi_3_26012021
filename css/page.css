@@ -100,7 +100,7 @@
     opacity: 1;
     z-index: 100; }
   100% {
-    margin-top: 300%; } }
+    margin-top: 400%; } }
 .entryMenu .menuOne {
   animation: menu 1.2s; }
 .entryMenu .menuTwo {
@@ -380,9 +380,9 @@ article:hover .checkin i::before {
   cursor: pointer;
   margin: auto;
   transition: all 0.2s ease-in; }
-  .checkout p {
+  .checkout span {
     width: 100%;
-    line-height: 20px;
+    line-height: 50px;
     font-size: medium;
     color: white; }
   .checkout:hover {

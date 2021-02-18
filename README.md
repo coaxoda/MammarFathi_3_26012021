@@ -41,9 +41,10 @@ les animations ou transitions CSS, pas de JavaScript ni de librairie
   - Lib CSS ⚠
   - Framework CSS ⚠
 ## VALIDATION W3C 
- - HTMl ✅
- - CSS ✅
+ - HTML5 ✅
+ - CSS3 ✅
 ## COMPATIBLITE
  - Chrome ✅
  - FireFox ✅
  - Opera/GX ✅
+ - MS Edge

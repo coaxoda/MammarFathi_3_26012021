@@ -230,13 +230,10 @@
             border-radius: $bordertop;
         }
 
-        figcaption, h3, p {
+        h3, p {
             margin: 10px;
-            
-            h3{
-                display: flex;
-                justify-content: space-between;
-            }
+            justify-content: space-between;
+            display: flex;
         }
 
         i{

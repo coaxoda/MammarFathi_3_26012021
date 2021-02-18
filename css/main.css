@@ -34,12 +34,12 @@
     transform: translateX(70px); }
   to {
     transform: translateX(0px);
-    width: 90px; } }
+    width: 100px; } }
 /*** ANIMATION WHEN UN:HOVER On ARTICLE OF MENU ***/
 @keyframes slideout {
   from {
     transform: translateX(0px);
-    width: 90px; }
+    width: 100px; }
   to {
     transform: translateX(70px); } }
 /*** ICON VALIDATOR ANIMATION ***/
@@ -93,14 +93,89 @@
   90% {
     transform: scale(1); }
   95% {
-    transform: scale(1.5);
-    opacity: 1;
+    transform: scale(1.8);
     margin-top: 0; }
   99% {
-    transform: scale(1.5); }
+    transform: scale(1);
+    opacity: 1;
+    z-index: 100; }
   100% {
-    opacity: 0;
     margin-top: 300%; } }
+@keyframes hover {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(1.02); } }
+/*** DESK MEDIA ***/
+@media screen and (min-width: 768px) {
+  main {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+    margin-bottom: 2rem; }
+
+  .menuExplorer button {
+    width: 20% !important; }
+
+  .functionContainer h2 {
+    display: flex;
+    justify-content: center; }
+
+  .functionList {
+    width: 100%;
+    flex-direction: unset !important;
+    justify-content: center; }
+    .functionList p {
+      width: 30%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      margin: 1rem 1rem !important; }
+      .functionList p span {
+        margin: 0px 5px 0px -12.5px;
+        overflow: hidden; }
+      .functionList p i {
+        padding: 0rem 1% 0rem 0rem !important; }
+
+  .restaurant {
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 1rem; }
+    .restaurant .restaurantItems {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center; }
+    .restaurant h2 {
+      display: flex;
+      bottom: 405px; }
+    .restaurant article {
+      margin: 1rem !important;
+      margin: 1rem;
+      height: 270px;
+      width: 45%;
+      position: relative;
+      transition: all 0.2s ease-in;
+      animation: menu 3s cubic-bezier(0.455, 0.03, 0.515, 0.955); }
+      .restaurant article .new1, .restaurant article .new2 {
+        display: none; }
+      .restaurant article .newDesk, .restaurant article .newDesk2 {
+        width: 100%;
+        position: absolute;
+        height: 30px;
+        bottom: 80px;
+        background-color: #99E2D0; }
+        .restaurant article .newDesk h4, .restaurant article .newDesk2 h4 {
+          color: #2a976a;
+          margin: 0;
+          display: flex;
+          justify-content: center;
+          line-height: 30px; }
+      .restaurant article:hover {
+        transform: scale(1.01);
+        box-shadow: 0px 15px 10px #dadada; } }
+@media screen and (max-width: 768px) {
+  .newDesk, .newDesk2 {
+    display: none; } }
 /******* @import "reset.scss"; ***********/
 body {
   margin: 0;
@@ -246,7 +321,8 @@ header {
   .restaurant article {
     border-radius: 1rem;
     box-shadow: 0px 5px 10px #dadada;
-    margin-bottom: 1rem; }
+    margin-bottom: 1rem;
+    height: 270px; }
     .restaurant article .new1, .restaurant article .new2 {
       position: absolute;
       width: 80px;

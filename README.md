@@ -1,6 +1,6 @@
 # OHMYFOOD - OC -P3
 
-### Réalisation des troisièmes projets du parcours Developpement Web d'Openclassroom, ci-présent, la réalisation d'une vitrine inspirée d'une maquette de la plateforme de restauration en ligne Ohmyfood.
+### Réalisation du troisièmes projets du parcours Developpement Web d'Openclassroom, ci-présent, la réalisation d'une vitrine inspirée d'une maquette de la plateforme de restauration en ligne Ohmyfood.
 #### Vitrine présente via le lien ci-desous:
 - Vitrine du site [Ohmyfood](https://coaxoda.github.io).
 

@@ -60,7 +60,7 @@
     opacity: 0; }
   50% {
     opacity: 0.5;
-    transform: scale(1.1); }
+    transform: scale(1.05); }
   75% {
     opacity: 0.6;
     transform: scale(0.99); }
@@ -101,27 +101,23 @@
     z-index: 100; }
   100% {
     margin-top: 300%; } }
-@keyframes hover {
-  from {
-    transform: scale(1); }
-  to {
-    transform: scale(1.02); } }
-/*** DESK MEDIA ***/
+/*** DESKTOP MEDIA ***/
 @media screen and (min-width: 768px) {
   main {
     margin-left: auto;
-    margin-right: auto;
-    max-width: 1440px;
-    margin-bottom: 2rem; }
+    margin-right: auto; }
 
   .menuExplorer button {
     width: 20% !important; }
 
-  .functionContainer h2 {
-    display: flex;
-    justify-content: center; }
+  .functionContainer {
+    /** HOW TO SETTINGS **/ }
+    .functionContainer h2 {
+      display: flex;
+      justify-content: center; }
 
   .functionList {
+    /** HOW TO SETTINGS **/
     width: 100%;
     flex-direction: unset !important;
     justify-content: center; }
@@ -136,11 +132,13 @@
       .functionList p i {
         padding: 0rem 1% 0rem 0rem !important; }
 
+  /** RESTAURANT SELECTION SETTINGS **/
   .restaurant {
     flex-wrap: wrap;
     justify-content: center;
     border-radius: 1rem; }
     .restaurant .restaurantItems {
+      /** RESTAURANT ITEMS SETTINGS **/
       display: flex;
       width: 100%;
       flex-wrap: wrap;
@@ -149,16 +147,19 @@
       display: flex;
       bottom: 405px; }
     .restaurant article {
+      /** ARTICLE RESTAURANT SETTINGS (! FOR DESK ONLY )**/
       margin: 1rem !important;
       margin: 1rem;
       height: 270px;
       width: 45%;
       position: relative;
       transition: all 0.2s ease-in;
-      animation: menu 3s cubic-bezier(0.455, 0.03, 0.515, 0.955); }
+      animation: menu 3s ease-in; }
       .restaurant article .new1, .restaurant article .new2 {
+        /** <= NEW RESTAURANT CAPTION FOR MOBILE **/
         display: none; }
       .restaurant article .newDesk, .restaurant article .newDesk2 {
+        /** <= NEW RESTAURANT CAPTION FOR DESKTOP **/
         width: 100%;
         position: absolute;
         height: 30px;
@@ -172,7 +173,37 @@
           line-height: 30px; }
       .restaurant article:hover {
         transform: scale(1.01);
-        box-shadow: 0px 15px 10px #dadada; } }
+        box-shadow: 0px 15px 10px #dadada; }
+
+  /** MENU SELECTION SETTINGS **/
+  .menu {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 0 !important; }
+    .menu .menuTitle {
+      position: relative; }
+      .menu .menuTitle h3 {
+        top: -30px;
+        left: 20px;
+        position: absolute; }
+    .menu .entryMenu {
+      display: block;
+      width: 30%;
+      margin: 1rem; }
+    .menu .mainMenu {
+      display: block;
+      width: 30%;
+      margin: 1rem; }
+    .menu .endMenu {
+      display: block;
+      width: 30%;
+      margin: 1rem; }
+
+  .checkout {
+    width: 15% !important; } }
+/** NEW RESTAURANT CAPTION SETTINGS (Default : display:none; for Desk or max width 768px) **/
+/** TABLET/ MOBILE FORMAT **/
 @media screen and (max-width: 768px) {
   .newDesk, .newDesk2 {
     display: none; } }

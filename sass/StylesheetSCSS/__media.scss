@@ -1,0 +1,93 @@
+/*** DESK MEDIA ***/
+@media screen and (min-width:768px){
+    main{
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1440px;
+        margin-bottom: 2rem;
+    }
+    
+    .menuExplorer{
+        button{
+            width: 20% !important;
+        }
+    }
+    .functionContainer{
+        h2{
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .functionList{
+        width: 100%;
+        flex-direction: unset !important;
+        justify-content: center;
+        p{
+            width: 30%;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            margin: 1rem 1rem !important;
+
+            span{
+                margin: 0px 5px 0px -12.5px;
+                overflow: hidden;
+            }
+
+            i{
+                padding: 0rem 1% 0rem 0rem !important;
+            }
+        }
+    }
+
+    .restaurant{
+        flex-wrap: wrap;
+        justify-content: center;
+        border-radius: 1rem;
+        .restaurantItems{
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        h2{
+            display: flex;
+            bottom: 405px;
+        }
+        article{
+            margin: 1rem !important;
+            margin: 1rem;
+            height: 270px;
+            width: 45%;
+            position: relative;
+            transition: all 0.2s ease-in;
+            animation: menu 3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+            .new1, .new2{
+                display: none;
+            }
+            .newDesk, .newDesk2{
+                width: 100%;
+                position: absolute;
+                height: 30px;
+                bottom: 80px;
+                background-color: #99E2D0;
+                h4{
+                    color: #2a976a;
+                    margin: 0;
+                    display: flex;
+                    justify-content: center;
+                    line-height: 30px;
+                }
+            }
+            &:hover{
+                transform: scale(1.01);
+                box-shadow: $shadeMov;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px){
+    .newDesk, .newDesk2{
+        display: none;
+    }
+}

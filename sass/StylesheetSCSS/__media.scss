@@ -1,10 +1,8 @@
-/*** DESK MEDIA ***/
+/*** DESKTOP MEDIA ***/
 @media screen and (min-width:768px){
     main{
         margin-left: auto;
         margin-right: auto;
-        max-width: 1440px;
-        margin-bottom: 2rem;
     }
     
     .menuExplorer{
@@ -12,13 +10,13 @@
             width: 20% !important;
         }
     }
-    .functionContainer{
+    .functionContainer{ /** HOW TO SETTINGS **/
         h2{
             display: flex;
             justify-content: center;
         }
     }
-    .functionList{
+    .functionList{ /** HOW TO SETTINGS **/
         width: 100%;
         flex-direction: unset !important;
         justify-content: center;
@@ -38,12 +36,12 @@
             }
         }
     }
-
+    /** RESTAURANT SELECTION SETTINGS **/
     .restaurant{
         flex-wrap: wrap;
         justify-content: center;
         border-radius: 1rem;
-        .restaurantItems{
+        .restaurantItems{ /** RESTAURANT ITEMS SETTINGS **/
             display: flex;
             width: 100%;
             flex-wrap: wrap;
@@ -53,18 +51,18 @@
             display: flex;
             bottom: 405px;
         }
-        article{
+        article{ /** ARTICLE RESTAURANT SETTINGS (! FOR DESK ONLY )**/
             margin: 1rem !important;
             margin: 1rem;
             height: 270px;
             width: 45%;
             position: relative;
             transition: all 0.2s ease-in;
-            animation: menu 3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-            .new1, .new2{
+            animation: menu 3s ease-in;
+            .new1, .new2{ /** <= NEW RESTAURANT CAPTION FOR MOBILE **/
                 display: none;
             }
-            .newDesk, .newDesk2{
+            .newDesk, .newDesk2{ /** <= NEW RESTAURANT CAPTION FOR DESKTOP **/
                 width: 100%;
                 position: absolute;
                 height: 30px;
@@ -84,10 +82,50 @@
             }
         }
     }
-}
+    /** MENU SELECTION SETTINGS **/
+    .menu{
+        display: flex;
+        justify-content: space-evenly;
+        width:100%;
+        padding: 0 !important;
+        .menuTitle{
+            position: relative;
+            h3{
+                top: -30px;
+                left: 20px;
+                position: absolute;
+            }
+        }
+        .entryMenu{
+            display: block;
+            width: 30%;
+            margin: 1rem;
+        }
+        .mainMenu{
+            display: block;
+            width: 30%;
+            margin: 1rem;
+        }
+        .endMenu{
+            display: block;
+            width: 30%;
+            margin: 1rem;
 
+        }
+    }
+
+    .checkout{
+        width: 15% !important;
+    }
+}
+/** NEW RESTAURANT CAPTION SETTINGS (Default : display:none; for Desk or max width 768px) **/
+/** TABLET/ MOBILE FORMAT **/
 @media screen and (max-width:768px){
     .newDesk, .newDesk2{
         display: none;
     }
 }
+
+
+
+

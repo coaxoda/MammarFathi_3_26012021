@@ -239,7 +239,7 @@ body {
       align-items: center; }
     body .loader h1 {
       color: #383838;
-      font-size: xxx-large;
+      font-size: 300%;
       font-family: Shrikhand; }
     body .loader .loaderLine {
       position: absolute;
@@ -421,7 +421,7 @@ footer {
     color: white !important;
     cursor: pointer; }
     footer p:hover {
-      text-decoration: underline 1px white; }
+      text-decoration: underline white; }
   footer a {
     color: white; }
   footer i {
